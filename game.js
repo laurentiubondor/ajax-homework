@@ -72,18 +72,14 @@ function displayLoader() {
 
     var loader = document.getElementsByClassName("loader")[0];
 
-    var container = document.getElementsByClassName("flex-container")[0];
-
     loader.style.display = "block";
 
-    container.style.opacity = 0.5;
+
 }
 
 function hideLoader() {
     var loader = document.getElementsByClassName("loader")[0];
-    var container = document.getElementsByClassName("flex-container")[0];
-    loader.style.display = "none";
-    container.style.opacity = 1;
-}
 
-document.addEventListener("DOMContentLoaded", function() {})
+    loader.style.display = "none";
+
+}
