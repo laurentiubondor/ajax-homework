@@ -19,10 +19,13 @@ function getGames() {
 
             joc = jsonResp;
 
-            joc.forEach(function(element) {
+            //joc.forEach(function(element) 
+            for (var i = 0; i < 8; i++) {
 
-                dysplayGames(element);
-            })
+
+                dysplayGames(joc[i])
+
+            }
         })
         .catch(function() { displayError("Something went wrong! Try again!"); })
 
@@ -49,6 +52,7 @@ function dysplayGames(joc)
     var descriere = document.createElement("h5");
 
     img = document.createElement("img");
+
     img.setAttribute("src", joc.imageUrl);
 
 
@@ -71,15 +75,10 @@ function displayError(errorMessage) {
 function displayLoader() {
 
     var loader = document.getElementsByClassName("loader")[0];
-
     loader.style.display = "block";
-
-
 }
 
 function hideLoader() {
     var loader = document.getElementsByClassName("loader")[0];
-
     loader.style.display = "none";
-
 }
